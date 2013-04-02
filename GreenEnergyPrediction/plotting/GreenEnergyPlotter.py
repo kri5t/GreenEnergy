@@ -4,13 +4,13 @@ import csv
 import matplotlib.pyplot as plt
 import numpy as np
 
-plt.plotfile('C:\Users\Brian\Desktop\Brian\Universitetet\Kandidat\Master Thesis\WeLoveGREEN-ENERGY\DATASET_FOR_GREEN_ENERGY_PLOTTING\wind_vs_production.csv', delimiter=';', cols=(0, 1),
-    names=('Wind Speed', 'Wind Production'), linestyle='None', marker='.')
+plt.plotfile('C:\Users\Brian\Desktop\Brian\Universitetet\Kandidat\Master Thesis\WeLoveGREEN-ENERGY\DATASET_FOR_GREEN_ENERGY_PLOTTING\wind_vs_production_averaged.csv', delimiter=';', cols=(0, 1),
+    names=('Wind Production', 'Wind Speed'), linestyle='None', marker='.')
 
 y=[]
 x=[]
 
-with open('C:\Users\Brian\Desktop\Brian\Universitetet\Kandidat\Master Thesis\WeLoveGREEN-ENERGY\DATASET_FOR_GREEN_ENERGY_PLOTTING\wind_vs_production.csv', 'rb') as csvfile:
+with open('C:\Users\Brian\Desktop\Brian\Universitetet\Kandidat\Master Thesis\WeLoveGREEN-ENERGY\DATASET_FOR_GREEN_ENERGY_PLOTTING\wind_vs_production_averaged.csv', 'rb') as csvfile:
     dat = csv.reader(csvfile, delimiter=';')
     for row in dat:
         y.append(int(row[1]))
